@@ -80,6 +80,9 @@ public:
          *   - makes its handle invalid.
          *   - [imported resource only] adds a side-effect (see sideEffect() below
          */
+
+        // TODO: the Descriptor probably needs to have a viewport.
+        // TODO: this is probably even more true for imported targets
         Attachments useRenderTarget(const char* name,
                 FrameGraphRenderTarget::Descriptor const& desc,
                 driver::TargetBufferFlags clearFlags = {}) noexcept;

@@ -265,6 +265,9 @@ void FRenderer::renderJob(ArenaScope& arena, FView& view) {
                 input = ppm.dynamicScaling(fg, input, ldrFormat, vp);
             }
 
+            // FIXME: without being able to specify a viewport for the RT we can't draw
+            // FIXME: a View in the right place
+
             fg.moveResource(output, input);
             fg.present(output);
 
